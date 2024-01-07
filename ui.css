@@ -43,4 +43,30 @@
         border-radius: 0.25rem;
         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     }
+
+    .image-holder {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%/4, max(200px, 100%/5)), 1fr));
+        gap: 0.5rem;     
+    }
+
+    .image {
+        cursor: pointer;
+        width: 600px;
+        height: auto;
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+
+.zoom {
+    transition: transform .2s; /* Animation */
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.5);
 }

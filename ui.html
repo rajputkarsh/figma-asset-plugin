@@ -5,16 +5,57 @@
 <div class="main">
   <h2 class="title">Download Figma Designs</h2>
 
-<form>
-  <div class="form-group">
-    <input type="text" class="form-control" id="search" placeholder="Search">
+  <form>
+    <div class="form-group">
+      <input type="text" class="form-control" id="search" placeholder="Search">
+    </div>
+  </form>
+
+
+  <div class="recently-viewed">
+    <h3 class="sub-title">Recently Viewed</h3>
+    <div class="image-holder">
+      <div class="image zoom" onclick='openImage("https://placehold.co/600x400")''>
+        <img src="https://placehold.co/600x400" />
+        <span>Laptop</span>      
+      </div>
+      <div class="image zoom" onclick='openImage("https://placehold.co/600x400")''>
+        <img src="https://placehold.co/600x400" />
+        <span>Cricket</span>      
+      </div>
+      <div class="image zoom" onclick='openImage("https://placehold.co/600x400")''>
+        <img src="https://placehold.co/600x400" />
+        <span>Bike</span>      
+      </div>
+    </div>
   </div>
-</form>
 
+  <div class="best-sellers">
+    <h3 class="sub-title">Best Sellers</h3>
+    <div class="image-holder">
+      <div class="image zoom" onclick='openImage("https://placehold.co/600x400")''>
+        <img src="https://placehold.co/600x400" />
+        <span>Dog</span>      
+      </div>
+      <div class="image zoom" onclick='openImage("https://placehold.co/600x400")''>
+        <img src="https://placehold.co/600x400" />
+        <span>Laptop</span>      
+      </div>
+      <div class="image zoom" onclick='openImage("https://placehold.co/600x400")''>
+        <img src="https://placehold.co/600x400" />
+        <span>Cricket</span>      
+      </div>
+      <div class="image zoom" onclick='openImage("https://placehold.co/600x400")''>
+        <img src="https://placehold.co/600x400" />
+        <span>IPhone</span>      
+      </div>
+      <div class="image zoom" onclick='openImage("https://placehold.co/600x400")''>
+        <img src="https://placehold.co/600x400" />
+        <span>Bike</span>      
+      </div>
+    </div>
+  </div>
 
-<div class="best-sellers">
-  <h3 class="sub-title">Best Sellers</h3>
-</div>
 </div>
 
 
@@ -22,6 +63,11 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <script>
+
+  function openImage(url) {
+    window.open(url, '_blank')
+  }
+
   window.addEventListener('load', function () {
     parent.postMessage('fetch-bestsellers');
   });
