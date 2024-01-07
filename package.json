@@ -1,0 +1,19 @@
+{
+  "name": "Design-Import",
+  "version": "1.0.0",
+  "description": "Your Figma Plugin",
+  "main": "code.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "npm run build -- --watch"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.83.0",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "firebase": "^10.7.1"
+  }
+}

@@ -1,0 +1,13 @@
+<h2>Download Figma Designs</h2>
+
+<input type="text" id="search-field" placeholder="Search Designs" />
+
+<div class="search-results"></div>
+
+<div class="best-sellers"></div>
+
+<script>
+  window.addEventListener('load', function () {
+    parent.postMessage('fetch-bestsellers');
+  });
+</script>
